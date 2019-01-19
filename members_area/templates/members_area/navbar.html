@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'members_area/navbar.css' %}">
+{% url 'landing-page' as landing_url %}
+{% if landing_url == request.path %}
+<div class="navbar-landing">
+  <div class="left-title">
+    <h1>Fine Fettling</h1>
+  </div>
+  <div class="landing-buttons">
+    <a href="{% url 'home-page' %}" class="tab home-tab">Home</a>
+    <a href="{% url 'garage-page' %}" class="tab garage-tab">Garage</a>
+    <a href="{% url 'pricing-page' %}" class="tab pricing-tab">Pricing</a>
+  </div>
+</div>
+{% else %}
+<div class="navbar-main">
+  <div class="title-banner">
+    <a href="{% url 'landing-page' %}" style="text-decoration: none;"><h1>Fine Fettling</h1></a>
+  </div>
+  <div class="nav-btns">
+    <a href="{% url 'home-page' %}" class="tab home-tab">Home</a>
+    <a href="{% url 'garage-page' %}" class="tab garage-tab">Garage</a>
+    <a href="{% url 'events-page' %}" class="tab meetings-tab">Events</a>
+  </div>
+</div>
+{% endif %}
+
+
+

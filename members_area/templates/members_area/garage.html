@@ -1,0 +1,7 @@
+{% extends 'members_area/base.html' %}
+{% block content %}
+  {% for car in cars %}
+    <h1>{{car.brand}} - {{car.model}} ({{car.year}})</h1>
+    <p>Owned by {{car.owner}}</p>
+  {% endfor %}
+{% endblock content %}

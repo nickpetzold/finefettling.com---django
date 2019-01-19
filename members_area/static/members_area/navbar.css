@@ -1,0 +1,81 @@
+.navbar-landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+.navbar-landing .left-title {
+  margin-left: 40px;
+}
+.navbar-landing .left-title h1 {
+  font-size: 42px;
+  font-weight: bold;
+  font-style: italic;
+}
+.navbar-landing .landing-buttons {
+  margin-right: 40px;
+}
+.navbar-landing .landing-buttons a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+.navbar-landing .landing-buttons a:hover {
+  color: #dbdbdb;
+}
+.landing .navbar-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.title-banner {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: space-around;
+  border: none;
+}
+.title-banner h1 {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 42px;
+}
+.nav-btns {
+  height: 46px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.2);
+}
+.nav-btns .active {
+  border-bottom: 4px solid black !important;
+  font-weight: bold;
+}
+.nav-btns a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 0 16px;
+  transition: all 0.15s ease;
+  border-bottom: 4px solid white;
+  text-decoration: none !important;
+}
+.nav-btns a:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #ffc211;
+}
