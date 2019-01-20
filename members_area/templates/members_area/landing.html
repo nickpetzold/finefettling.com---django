@@ -1,12 +1,14 @@
 {% extends 'members_area/base.html' %}
 {% load static %}
-{% load cloudinary %}
 <link rel="stylesheet" href="{% static 'members_area/landing.css' %}">
 {% block content %}
   <div class="top-banner">
     <div class="logo-container">
       <!-- <%= cl_image_tag("mph2-logo.jpg", class: "logo") %> -->
-      {% CloudinaryImage("mph2-logo.jpg").image() %}
+      {% load cloudinary %}
+      {{ img = cloudinary.CloudinaryImage("mph2-logo.jpg") }}
+      {% img.build_url() %}
+      {% img.image(width=100, height=100, crop="fill") %}
     </div>
     <div class="enter-container">
       <div class="text-center title-container">

@@ -130,9 +130,9 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-cloudinary.config(
-  cloud_name = "dy6wiutks",
-  api_key = "694278188222143",
-  api_secret = "ZcpF4y917uesuXOiUm2MNOMHCLM"
-)
+CLOUDINARY = {
+  'cloud_name': 'dy6wiutks',
+  'api_key': '694278188222143',
+  'api_secret': 'ZcpF4y917uesuXOiUm2MNOMHCLM',
+}
 
