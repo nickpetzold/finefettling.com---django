@@ -1,48 +1,46 @@
 {% extends 'members_area/base.html' %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'members_area/landing.css' %}">
 {% block content %}
-  <div class="top-banner">
-    <div class="logo-container">
-      <!-- <%= cl_image_tag("mph2-logo.jpg", class: "logo") %> -->
-      {% load cloudinary %}
-      {{ img = cloudinary.CloudinaryImage("mph2-logo.jpg") }}
-      {% img.build_url() %}
-      {% img.image(width=100, height=100, crop="fill") %}
-    </div>
-    <div class="enter-container">
-      <div class="text-center title-container">
-        <h1>MPH2</h1>
-        <h1>Classic Car Club</h1>
-      </div>
-      <!-- <%= link_to 'Enter', home_path, class: 'enter-btn' %> -->
-      <h2>Members Only</h2>
-    </div>
-    <div class="pitlane-container">
-      <!-- <%= cl_image_tag("328-pitlane.jpg", class: "ferrari-pitlane") %> -->
-    </div>
+{% load static %}
+{% load cloudinary %}
+<link rel="stylesheet" href="{% static 'members_area/landing.css' %}">
+<div class="top-banner">
+  <div class="logo-container">
+    {% cloudinary "mph2-logo.jpg" class="logo" %}
   </div>
-  <div class="lp-wrapper">
-    <div class="car-icons">
-      <!-- <%= image_tag 'jaguar.png', class: 'jag-badge' %>
-      <%= image_tag 'ferrari.png', class: 'car-badge' %>
-      <%= image_tag 'triumph.png', class: 'car-badge' %>
-      <%= image_tag 'porsche.png', class: 'car-badge' %>
-      <%= image_tag 'alfaromeo.png', class: 'car-badge' %> -->
+  <div class="enter-container">
+    <div class="text-center title-container">
+      <h1>MPH2</h1>
+      <h1>Classic Car Club</h1>
     </div>
-    <div class="paddock-pic">
-      <!-- <%= cl_image_tag("paddock.jpg", class: 'paddock-image') %> -->
-    </div>
+    <!-- <%= link_to 'Enter', home_path, class: 'enter-btn' %> -->
+    <h2>Members Only</h2>
   </div>
-  <div class="mo">
-    <div class="momoe-image">
-      <!-- <%= cl_image_tag("momoe.jpg", class: "momoe") %> -->
-    </div>
-    <div class="strapline-container">
-      <h2 class="strapline text-center">The one and only classic car club in the Midhurst-Petworth-Haslemere area</h2>
-    </div>
+  <div class="pitlane-container">
+    <!-- <%= cl_image_tag("328-pitlane.jpg", class: "ferrari-pitlane") %> -->
   </div>
-  <div class="goodwood-bird">
-    <!-- <%= cl_image_tag("goodwood-girl.jpg", class: 'goodwood-girl') %> -->
+</div>
+<div class="lp-wrapper">
+  <div class="car-icons">
+    <!-- <%= image_tag 'jaguar.png', class: 'jag-badge' %>
+    <%= image_tag 'ferrari.png', class: 'car-badge' %>
+    <%= image_tag 'triumph.png', class: 'car-badge' %>
+    <%= image_tag 'porsche.png', class: 'car-badge' %>
+    <%= image_tag 'alfaromeo.png', class: 'car-badge' %> -->
   </div>
-{% endblock content %}
+  <div class="paddock-pic">
+    <!-- <%= cl_image_tag("paddock.jpg", class: 'paddock-image') %> -->
+  </div>
+</div>
+<div class="mo">
+  <div class="momoe-image">
+    <!-- <%= cl_image_tag("momoe.jpg", class: "momoe") %> -->
+  </div>
+  <div class="strapline-container">
+    <h2 class="strapline text-center">The one and only classic car club in the Midhurst-Petworth-Haslemere area</h2>
+  </div>
+</div>
+<div class="goodwood-bird">
+  <!-- <%= cl_image_tag("goodwood-girl.jpg", class: 'goodwood-girl') %> -->
+</div>
+{% endblock content %}  
+  

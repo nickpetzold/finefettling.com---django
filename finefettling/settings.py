@@ -128,11 +128,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CLOUDINARY = {
-  'cloud_name': 'dy6wiutks',
-  'api_key': '694278188222143',
-  'api_secret': 'ZcpF4y917uesuXOiUm2MNOMHCLM',
-}
+cloudinary.config(
+    cloud_name = 'dy6wiutks',
+    api_key = '694278188222143',
+    api_secret = 'ZcpF4y917uesuXOiUm2MNOMHCLM',
+)
 
