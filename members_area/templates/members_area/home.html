@@ -1,5 +1,29 @@
 {% extends 'members_area/base.html' %}
 {% block content %}
-  <h1>Home page</h1>
+{% load static %}
+{% load cloudinary %}
+<link rel="stylesheet" href="{% static 'members_area/home.css' %}">
+<div class="down-caret">
+  <a href="#home-container"><i class="fas fa-angle-down"></i></a>
+</div>
+<div id="home-container">
+  <div class="home-title-container">
+    <h1 class="home-title text-center">Welcome to the MPH2 Classic Car Club</h1>
+  </div>
+  <div>
+    {% cloudinary "bordeaux_trip.jpg" class="home-main-image" %}
+    <h4 class="picture-strapline text-right">Club gathering for the annual run to France</h4>
+  </div>
+  <div>
+    <h2 class="mid-line text-center">The only classic car club in the Midhurst-Petworth-Haslemere area…</h2>
+  </div>
+  <div class="management-pics">
+    {% cloudinary "chairman_enjoying_a_pint.jpg" class="management-pic" %}
+    {% cloudinary "secretary_on_the_tequila.jpg" class="management-pic" %}
+  </div>
+  <div>
+    <h2 class="final-word text-center">Come to the Stag at Ball’s Cross on the last Thursday of every month to have a pint, meet the Club Management and hear all the latest members’ news.</h2>
+  </div>
+</div>
 {% endblock content %}
 
